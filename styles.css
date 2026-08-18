@@ -70,6 +70,20 @@ h3 { font-size: 1.12rem; }
 .button.primary { background: var(--ink); color: #fff; }
 .button.secondary { border: 1px solid var(--line); background: var(--surface); }
 .hero-aside { display: grid; gap: 14px; }
+.portrait-card {
+  margin: 0 0 8px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 46px rgba(24, 32, 31, 0.08);
+}
+.portrait-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
 .interest-card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
 .interest-card span { color: var(--accent); font-size: 0.8rem; font-weight: 700; }
 .interest-card h2 { font-family: "DM Sans", sans-serif; font-size: 1.15rem; margin: 10px 0 8px; }
@@ -110,6 +124,7 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 36px; color: var(--m
   .hero { padding-top: 64px; gap: 36px; }
   .two-col { gap: 24px; }
   .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+  .portrait-card { max-width: 420px; }
   nav { display: none; }
 }
 
