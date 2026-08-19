@@ -49,7 +49,7 @@ nav a:hover { color: var(--ink); }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.55fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
   align-items: center;
   gap: clamp(48px, 7vw, 96px);
   padding: 110px 0 72px;
@@ -122,23 +122,27 @@ h3 { font-size: 1.12rem; line-height: 1.35; }
 .button.secondary { border: 1px solid var(--line); background: var(--surface); }
 
 .hero-visual {
-  width: min(100%, 240px);
+  width: min(100%, 300px);
   justify-self: end;
 }
 .portrait-card {
   margin: 0;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 24px;
-  background: var(--surface);
-  box-shadow: 0 18px 42px rgba(24, 32, 31, 0.09);
+  border-radius: 26px;
+  background-color: var(--surface);
+  background-image: url("portrait.jpg?v=20260819-hq3");
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1092 / 1486;
+  box-shadow: 0 20px 50px rgba(24, 32, 31, 0.1);
 }
 .portrait-card img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 240 / 327;
+  height: 100%;
   object-fit: cover;
+  opacity: 0;
 }
 .portrait-caption {
   margin: 12px 4px 0;
@@ -282,7 +286,8 @@ footer {
 @media (max-width: 940px) {
   nav { gap: 15px; }
   nav a { font-size: 0.86rem; }
-  .hero { grid-template-columns: minmax(0, 1fr) 240px; gap: 46px; }
+  .hero { grid-template-columns: minmax(0, 1fr) 270px; gap: 46px; }
+  .hero-visual { width: min(100%, 270px); }
   .focus-band { grid-template-columns: 1fr; }
   .focus-item { padding: 22px 0; }
   .focus-item + .focus-item { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
@@ -293,7 +298,7 @@ footer {
   nav { display: none; }
   .hero, .two-col, .research-grid { grid-template-columns: 1fr; }
   .hero { padding: 72px 0 56px; gap: 38px; }
-  .hero-visual { width: min(68vw, 240px); justify-self: start; }
+  .hero-visual { width: min(72vw, 280px); justify-self: start; }
   .hero-meta span::after { display: none; }
   .section { padding: 72px 0; }
   .section-intro { position: static; }
