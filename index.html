@@ -148,7 +148,7 @@
               The same workflow is tested across three deliberately different astrophysical problems. <strong>Sedov–Taylor</strong>
               blast waves test whether the method can balance physical calibration accuracy against adaptive-mesh refinement cost.
               <strong>Rotating Cylinder</strong> tests transfer to an angular-momentum-conservation target and a runtime-aware acquisition branch.
-              <strong>Local SAGE</strong> extends the same outer loop to a semi-analytic galaxy-formation model calibrated against eight observational constraints.
+              The third case uses a <strong>semi-analytic model (SAM)</strong>, an efficient galaxy-formation framework that represents complex baryonic processes through simplified physical prescriptions rather than resolving them directly with full hydrodynamics. Specifically, I use <strong>SAGE (Semi-Analytic Galaxy Evolution)</strong>, a SAM for galaxy evolution, and calibrate its feedback parameters against eight observational constraints.
             </p>
             <p>
               In the SAGE application, the autonomous workflow improves the combined observational fit from
@@ -183,7 +183,7 @@
           <div class="result-heading">
             <div>
               <p class="project-kicker">Featured result · preliminary</p>
-              <h3>SAGE observational constraints</h3>
+              <h3>SAGE (Semi-Analytic Galaxy Evolution) observational constraints</h3>
             </div>
             <p class="result-metric"><strong>R² 0.6914 → 0.7567</strong><span>+9.4% combined fit</span></p>
           </div>
@@ -191,7 +191,7 @@
             <img class="result-image" src="image%20(2).png" alt="Eight-panel comparison of SAGE observables for the manual calibration baseline, best active autonomous calibration, and observational constraints" loading="lazy" />
           </a>
           <figcaption>
-            <strong>Preliminary SAGE calibration result.</strong> Comparison of the manually calibrated SAGE model and the best autonomous calibration across eight observational constraints. The autonomous workflow improves the combined fit from R² = 0.6914 to R² = 0.7567, corresponding to a 9.4% improvement. Click the figure to view it at full resolution.
+            <strong>Preliminary SAGE calibration result.</strong> SAGE (Semi-Analytic Galaxy Evolution) is the semi-analytic galaxy-formation model used here. The figure compares the manually calibrated SAGE model and the best autonomous calibration across eight observational constraints. The autonomous workflow improves the combined fit from R² = 0.6914 to R² = 0.7567, corresponding to a 9.4% improvement. Click the figure to view it at full resolution.
           </figcaption>
         </figure>
       </div>
