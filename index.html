@@ -36,10 +36,10 @@
           <strong>large-scale astrophysical simulations</strong>, <strong>machine learning</strong>, and computational inference.
         </p>
         <p class="hero-note">
-          I work with Prof. Ji-hoon Kim on sample-efficient, machine-driven calibration of astrophysical simulations using
-          normalizing flows and sequential active learning. More broadly, I am interested in using computation as a language
-          for extracting physical insight from complex simulations and exploring parts of the universe that are difficult to
-          access through traditional approaches alone.
+          I work with Prof. Ji-hoon Kim on a fully autonomous calibration workflow that uses normalizing flows and
+          sequential active learning to adaptively explore parameter space while reducing the number and cost of expensive
+          model evaluations. More broadly, I am interested in using computation as a language for extracting physical insight
+          from complex simulations and exploring parts of the universe that are difficult to access through traditional approaches alone.
         </p>
         <div class="hero-meta" aria-label="Academic profile">
           <span>Seoul National University</span>
@@ -72,7 +72,7 @@
         <span>02</span>
         <div>
           <h2>Machine learning</h2>
-          <p>Normalizing flows, active learning, and data-driven methods for calibration, inference, and scientific discovery.</p>
+          <p>Normalizing flows, active learning, and adaptive parameter-space exploration for scientific calibration and inference.</p>
         </div>
       </article>
       <article class="focus-item">
@@ -96,11 +96,11 @@
           astrophysics and machine learning for astrophysical simulations.
         </p>
         <p>
-          My current project develops a sample-efficient calibration framework in which a conditional normalizing flow
-          learns target-conditioned parameter proposals and an active-learning loop decides which simulation or model
-          evaluation to run next. I am especially interested in problems where large-scale simulations, statistical
-          inference, and machine learning meet: how we can turn complex numerical universes into interpretable physical
-          constraints while making better use of limited computational budgets.
+          My current project develops an autonomous, sample-efficient calibration framework in which a conditional
+          normalizing flow learns target-conditioned parameter proposals and an active-learning loop decides which
+          simulation or model evaluation to run next. I am especially interested in problems where large-scale simulations,
+          statistical inference, and machine learning meet: how we can turn complex numerical universes into interpretable
+          physical constraints while making better use of limited computational budgets.
         </p>
         <p>
           A large part of what draws me to computational research is the logic of programming itself. I enjoy the way
@@ -129,14 +129,14 @@
         <div class="section-heading-row">
           <div>
             <p class="section-label">Current research</p>
-            <h2>Sample-efficient calibration of numerical universes.</h2>
+            <h2>Autonomous calibration across astrophysical models.</h2>
           </div>
-          <p class="section-summary">I am interested in machine-guided methods that make expensive simulations more calibratable, interpretable, and computationally efficient.</p>
+          <p class="section-summary">I am interested in adaptive, machine-guided methods that reduce the computational effort required to calibrate expensive numerical models.</p>
         </div>
         <div class="research-grid">
           <article class="featured-project">
             <p class="project-kicker">M.S. research · Seoul National University</p>
-            <h2>Sample-efficient machine-driven calibration for astrophysical simulations</h2>
+            <h2>Fully autonomous calibration via adaptive parameter-space exploration</h2>
             <p>
               I am developing a <strong>normalizing-flow-guided sequential active-calibration</strong> framework that separates
               case-specific target construction, model execution, and metric extraction from a reusable proposal-and-acquisition engine.
@@ -144,21 +144,21 @@
               target-conditioned parameter proposals; and a finite candidate pool is ranked before the next expensive evaluation.
             </p>
             <p>
-              The same outer workflow is tested across three different settings: <strong>Sedov–Taylor</strong> blast-wave profiles,
-              <strong>Rotating Cylinder</strong> angular-momentum conservation, and <strong>local SAGE</strong> galaxy-formation calibration
-              against multiple observational summary statistics. The goal is not to treat the learned density as an uncorrected
-              Bayesian posterior, but to improve the best realized calibration result under a fixed evaluation budget.
+              The same workflow is tested across three deliberately different astrophysical problems. <strong>Sedov–Taylor</strong>
+              blast waves test whether the method can balance physical calibration accuracy against adaptive-mesh refinement cost.
+              <strong>Rotating Cylinder</strong> tests transfer to an angular-momentum-conservation target and a runtime-aware acquisition branch.
+              <strong>Local SAGE</strong> extends the same outer loop to a semi-analytic galaxy-formation model calibrated against eight observational constraints.
             </p>
             <p>
-              In the current eight-observable local SAGE experiment, the shared best initial design reaches <strong>R² = 0.4359</strong>,
-              while joint learned-proposal selection reaches <strong>R² = 0.7060 within 10 active evaluations</strong>. In the Sedov case,
-              I also study cost-aware acquisition using adaptive-mesh refinement complexity, so candidate selection can account for
-              computational cost as well as physical profile agreement.
+              The broader goal is to build calibration systems that are not tied to a single simulator: the physical target and
+              execution wrapper can change, while the learned proposal and acquisition machinery remain reusable. I evaluate success
+              through the best realized physical or observational agreement under a limited evaluation budget, with computational cost
+              treated as part of the calibration problem rather than an afterthought.
             </p>
             <div class="tags">
               <span>Normalizing Flows</span>
               <span>Active Learning</span>
-              <span>Simulation Calibration</span>
+              <span>Adaptive Exploration</span>
               <span>Cost-aware Acquisition</span>
               <span>Enzo</span>
               <span>SAGE</span>
@@ -192,7 +192,7 @@
           <div>
             <h3>Research Assistant · Seoul National University</h3>
             <p class="muted">Prof. Ji-hoon Kim’s group · Computational Astrophysics</p>
-            <p>Machine-driven calibration of astrophysical simulations using conditional normalizing flows and active learning; Enzo hydrodynamic benchmarks, SAGE galaxy-formation calibration, simulation post-processing, and black-hole–galaxy co-evolution analysis.</p>
+            <p>Autonomous calibration of astrophysical simulations using conditional normalizing flows and active learning; Enzo hydrodynamic benchmarks, runtime- and refinement-aware acquisition, SAGE galaxy-formation calibration, simulation post-processing, and black-hole–galaxy co-evolution analysis.</p>
           </div>
         </article>
         <article class="timeline-item">
