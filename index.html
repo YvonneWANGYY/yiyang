@@ -36,9 +36,10 @@
           <strong>large-scale astrophysical simulations</strong>, <strong>machine learning</strong>, and computational inference.
         </p>
         <p class="hero-note">
-          I work with Prof. Ji-hoon Kim on machine-only calibration of astrophysical simulations using normalizing flows.
-          More broadly, I am interested in using computation as a language for extracting physical insight from complex
-          simulations and exploring parts of the universe that are difficult to access through traditional approaches alone.
+          I work with Prof. Ji-hoon Kim on sample-efficient, machine-driven calibration of astrophysical simulations using
+          normalizing flows and sequential active learning. More broadly, I am interested in using computation as a language
+          for extracting physical insight from complex simulations and exploring parts of the universe that are difficult to
+          access through traditional approaches alone.
         </p>
         <div class="hero-meta" aria-label="Academic profile">
           <span>Seoul National University</span>
@@ -53,9 +54,9 @@
 
       <div class="hero-visual">
         <figure class="portrait-card">
-          <img src="portrait.jpg" alt="Portrait of Yiyang Wang" />
+          <img src="portrait.jpg?v=20260819-hq3" alt="Portrait of Yiyang Wang" />
         </figure>
-        <p class="portrait-caption">Computational astrophysics · Seoul</p>
+        <p class="portrait-caption">Phu Quoc, Vietnam</p>
       </div>
     </section>
 
@@ -71,7 +72,7 @@
         <span>02</span>
         <div>
           <h2>Machine learning</h2>
-          <p>Normalizing flows and data-driven methods for inference, calibration, and scientific discovery.</p>
+          <p>Normalizing flows, active learning, and data-driven methods for calibration, inference, and scientific discovery.</p>
         </div>
       </article>
       <article class="focus-item">
@@ -95,10 +96,11 @@
           astrophysics and machine learning for astrophysical simulations.
         </p>
         <p>
-          My current project develops a machine-only calibration framework using normalizing flows. I am especially
-          interested in problems where large-scale simulations, statistical inference, and machine learning meet:
-          how we can turn complex numerical universes into interpretable physical constraints, and how new computational
-          methods can help us ask questions that would otherwise be difficult to formulate or solve.
+          My current project develops a sample-efficient calibration framework in which a conditional normalizing flow
+          learns target-conditioned parameter proposals and an active-learning loop decides which simulation or model
+          evaluation to run next. I am especially interested in problems where large-scale simulations, statistical
+          inference, and machine learning meet: how we can turn complex numerical universes into interpretable physical
+          constraints while making better use of limited computational budgets.
         </p>
         <p>
           A large part of what draws me to computational research is the logic of programming itself. I enjoy the way
@@ -127,27 +129,41 @@
         <div class="section-heading-row">
           <div>
             <p class="section-label">Current research</p>
-            <h2>Inference from numerical universes.</h2>
+            <h2>Sample-efficient calibration of numerical universes.</h2>
           </div>
-          <p class="section-summary">I am interested in methods that make complex simulations more interpretable, calibratable, and scientifically useful.</p>
+          <p class="section-summary">I am interested in machine-guided methods that make expensive simulations more calibratable, interpretable, and computationally efficient.</p>
         </div>
         <div class="research-grid">
           <article class="featured-project">
             <p class="project-kicker">M.S. research · Seoul National University</p>
-            <h2>Machine-only calibration for astrophysical simulations</h2>
+            <h2>Sample-efficient machine-driven calibration for astrophysical simulations</h2>
             <p>
-              I am developing a calibration framework based on <strong>normalizing flows</strong> to infer and
-              constrain astrophysical simulation parameters directly from simulation outputs. The broader goal
-              is to build flexible machine-learning tools that can connect high-dimensional numerical models with
-              physically meaningful observables and parameter constraints.
+              I am developing a <strong>normalizing-flow-guided sequential active-calibration</strong> framework that separates
+              case-specific target construction, model execution, and metric extraction from a reusable proposal-and-acquisition engine.
+              Latin-hypercube samples provide the initial design; a conditional rational-quadratic spline flow learns
+              target-conditioned parameter proposals; and a finite candidate pool is ranked before the next expensive evaluation.
+            </p>
+            <p>
+              The same outer workflow is tested across three different settings: <strong>Sedov–Taylor</strong> blast-wave profiles,
+              <strong>Rotating Cylinder</strong> angular-momentum conservation, and <strong>local SAGE</strong> galaxy-formation calibration
+              against multiple observational summary statistics. The goal is not to treat the learned density as an uncorrected
+              Bayesian posterior, but to improve the best realized calibration result under a fixed evaluation budget.
+            </p>
+            <p>
+              In the current eight-observable local SAGE experiment, the shared best initial design reaches <strong>R² = 0.4359</strong>,
+              while joint learned-proposal selection reaches <strong>R² = 0.7060 within 10 active evaluations</strong>. In the Sedov case,
+              I also study cost-aware acquisition using adaptive-mesh refinement complexity, so candidate selection can account for
+              computational cost as well as physical profile agreement.
             </p>
             <div class="tags">
               <span>Normalizing Flows</span>
+              <span>Active Learning</span>
               <span>Simulation Calibration</span>
-              <span>Scientific ML</span>
-              <span>Astrophysical Simulations</span>
+              <span>Cost-aware Acquisition</span>
+              <span>Enzo</span>
+              <span>SAGE</span>
             </div>
-            <p class="status">Manuscript in preparation.</p>
+            <p class="status"><em>Sample-Efficient Machine-Driven Calibration for Astrophysical Simulations</em> · manuscript in preparation.</p>
           </article>
 
           <article class="project-card">
@@ -176,7 +192,7 @@
           <div>
             <h3>Research Assistant · Seoul National University</h3>
             <p class="muted">Prof. Ji-hoon Kim’s group · Computational Astrophysics</p>
-            <p>Cosmological hydrodynamics simulations of massive black-hole emergence and evolution; machine-learning calibration of astrophysical simulations; halo finding, simulation post-processing, and black-hole–galaxy co-evolution analysis.</p>
+            <p>Machine-driven calibration of astrophysical simulations using conditional normalizing flows and active learning; Enzo hydrodynamic benchmarks, SAGE galaxy-formation calibration, simulation post-processing, and black-hole–galaxy co-evolution analysis.</p>
           </div>
         </article>
         <article class="timeline-item">
@@ -275,7 +291,7 @@
         </div>
         <div class="prose skills-copy">
           <p><strong>Programming &amp; computing:</strong> Python, PyTorch, TensorFlow, C, C++, MATLAB, Qiskit, high-performance computing.</p>
-          <p><strong>Astrophysics tools:</strong> Enzo, yt, simulation post-processing, halo finding, large-scale simulation analysis.</p>
+          <p><strong>Astrophysics tools:</strong> Enzo, yt, SAGE, simulation post-processing, halo finding, large-scale simulation analysis.</p>
           <p><strong>Languages &amp; tests:</strong> Native Chinese; English (IELTS 7.0, GRE 323 + 3.5 AWA); conversational Korean.</p>
         </div>
       </div>
