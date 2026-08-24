@@ -139,29 +139,20 @@
             <p class="project-kicker">M.S. research · Seoul National University</p>
             <h2>Fully autonomous calibration via adaptive parameter-space exploration</h2>
             <p>
-              I am developing a <strong>normalizing-flow-guided sequential active-calibration</strong> framework that separates
-              case-specific target construction, model execution, and metric extraction from a reusable proposal-and-acquisition engine.
-              Latin-hypercube samples provide the initial design; a conditional rational-quadratic spline flow learns
-              target-conditioned parameter proposals; and a finite candidate pool is ranked before the next expensive evaluation.
+              I am developing a <strong>fully autonomous, sample-efficient calibration framework</strong> that combines
+              conditional normalizing flows with sequential active learning to adaptively explore parameter space while
+              reducing the number and cost of expensive model evaluations.
             </p>
             <p>
-              The same workflow is tested across three deliberately different astrophysical problems. <strong>Sedov–Taylor</strong>
-              blast waves test whether the method can balance physical calibration accuracy against adaptive-mesh refinement cost.
-              <strong>Rotating Cylinder</strong> tests transfer to an angular-momentum-conservation target and a runtime-aware acquisition branch.
-              The third case uses a <strong>semi-analytic model (SAM)</strong>, an efficient galaxy-formation framework that represents complex baryonic processes through simplified physical prescriptions rather than resolving them directly with full hydrodynamics. Specifically, I use <strong>SAGE (Semi-Analytic Galaxy Evolution)</strong>, a SAM for galaxy evolution, and calibrate its feedback parameters against eight observational constraints.
-            </p>
-            <p>
-              In the SAGE application, the autonomous workflow improves the combined observational fit from
-              <strong>R² = 0.6914</strong> for the manually calibrated SAGE model to <strong>R² = 0.7567</strong>, a
-              <strong>9.4% improvement</strong>. The broader goal is to build calibration systems that are not tied to a single
-              simulator: the physical target and execution wrapper can change, while the learned proposal and acquisition
-              machinery remain reusable. Computational cost is treated as part of the calibration problem rather than an afterthought.
+              The framework is tested across hydrodynamic benchmarks and <strong>SAGE (Semi-Analytic Galaxy Evolution)</strong>,
+              a semi-analytic model (SAM) of galaxy formation. In SAGE, calibrating feedback parameters against eight observational
+              constraints improves the combined fit from <strong>R² = 0.6914</strong> to <strong>R² = 0.7567</strong>, a
+              <strong>9.4% improvement</strong> over the manually calibrated model.
             </p>
             <div class="tags">
               <span>Normalizing Flows</span>
               <span>Active Learning</span>
               <span>Adaptive Exploration</span>
-              <span>Cost-aware Acquisition</span>
               <span>Enzo</span>
               <span>SAGE</span>
             </div>
