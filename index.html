@@ -144,10 +144,11 @@
               reducing the number and cost of expensive model evaluations.
             </p>
             <p>
-              The framework is tested across hydrodynamic benchmarks and <strong>SAGE (Semi-Analytic Galaxy Evolution)</strong>,
-              a semi-analytic model (SAM) of galaxy formation. In SAGE, calibrating feedback parameters against eight observational
-              constraints improves the combined fit from <strong>R² = 0.6914</strong> to <strong>R² = 0.7567</strong>, a
-              <strong>9.4% improvement</strong> over the manually calibrated model, using only <strong>26 total model evaluations</strong>.
+              We tested the framework on hydrodynamic benchmarks and on <strong>SAGE (Semi-Analytic Galaxy Evolution)</strong>.
+              Across eight equally weighted galaxy properties, the calibrated models reduced the mean squared error
+              relative to the published manual calibration by <strong>18.5%</strong> with the baryon fraction free
+              and <strong>21.7%</strong> with it fixed at 0.17. Each search used 25 initial simulations, 25 adaptive
+              simulations, and one evaluation of the final recommendation.
             </p>
             <p>
               I am developing <code>autocalibration</code> so researchers can use this work with their own
@@ -180,16 +181,22 @@
         <figure class="result-figure">
           <div class="result-heading">
             <div>
-              <p class="project-kicker">Featured result · sample-efficient · 26 evaluations</p>
+              <p class="project-kicker">Featured result · 51 evaluations per search</p>
               <h3>SAGE (Semi-Analytic Galaxy Evolution) observational constraints</h3>
             </div>
-            <p class="result-metric"><strong>R² 0.6914 → 0.7567</strong><span>+9.4% combined fit</span></p>
+            <p class="result-metric"><strong>0.128536 → 0.100687</strong><span>Eight-observable loss · fixed baryon fraction</span></p>
           </div>
-          <a class="result-image-link" href="image%20(2).png" target="_blank" rel="noreferrer" aria-label="Open the full-resolution SAGE calibration result figure">
-            <img class="result-image" src="image%20(2).png" alt="Eight-panel comparison of SAGE observables for the manual calibration baseline, best active autonomous calibration, and observational constraints" loading="lazy" />
+          <a class="result-image-link" href="sage-observational-constraints.svg" target="_blank" rel="noreferrer" aria-label="Open the full-resolution SAGE calibration result figure">
+            <img class="result-image" src="sage-observational-constraints.svg" alt="Eight galaxy observables for SAGE models with free and fixed baryon fraction, compared with observations and the published manual calibration" loading="lazy" />
           </a>
           <figcaption>
-            <strong>Preliminary sample-efficient SAGE calibration result.</strong> SAGE (Semi-Analytic Galaxy Evolution) is the semi-analytic galaxy-formation model used here. Using only <strong>26 total model evaluations</strong>, the autonomous workflow improves the combined fit across eight observational constraints from R² = 0.6914 for the manually calibrated model to R² = 0.7567, corresponding to a 9.4% improvement. Click the figure to view it at full resolution.
+            The left and right columns show fits with the baryon fraction free and fixed at 0.17, respectively.
+            Blue and vermilion curves show five-target fits that assign 50% and 80% weight to the stellar mass function.
+            Green shows the eight-target fit. Gray dots trace the published manual calibration. Open circles and error bars
+            show observational references and adopted comparison scales. Asterisks mark properties held out of the five-target fits.
+            Those fits recover the decline in gas fraction with stellar mass but predict too few quenched galaxies at high stellar mass.
+            Across all eight observables, the equally weighted, range-normalized mean squared error falls from 0.128536 for
+            the manual model to 0.104723 for the free-baryon fit and 0.100687 for the fixed-baryon fit.
           </figcaption>
         </figure>
       </div>
